@@ -2,7 +2,7 @@
 title: pytorch的使用
 date: 2023-12-18
 categories:
-  - Programming
+  - 编程
 tags:
   - python
   - pytorch
