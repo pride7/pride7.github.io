@@ -299,20 +299,20 @@ canonifyurls = true
     # [params.comment.disqus]
       # enable = true
       # shortname = "pride丶gd"
-    [params.comment.gitalk]
-      enable = true
-      clientId = "239d64f9590342560e8c"
-      clientSecret = "b82b5eda231e75cc0f811bc702751f3f7890b490"
-      owner = "pride7"
-      admin = "pride7"
-      repo = "gitalk-comments"
+    #[params.comment.gitalk]
+      #enable = true
+      #clientId = "239d64f9590342560e8c"
+      #clientSecret = "b82b5eda231e75cc0f811bc702751f3f7890b490"
+      #owner = "pride7"
+      #admin = "pride7"
+      #repo = "gitalk-comments"
       # See all options: https://github.com/gitalk/gitalk#options
-      [params.comment.gitalk.options]
-        language = "zh"
-        perPage = 10
-        distractionFreeMode = false
-        enableHotKey = true
-        pagerDirection = "first"
+      #[params.comment.gitalk.options]
+        #language = "zh"
+        #perPage = 10
+        #distractionFreeMode = false
+        #enableHotKey = true
+        #pagerDirection = "first"
 
   # --------------------
   # Header configuration
