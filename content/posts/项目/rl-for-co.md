@@ -1,5 +1,5 @@
 ---
-title: RL for CO：项目日志
+title: RL for CO
 date: 2023-12-18
 categories:
   - 项目
