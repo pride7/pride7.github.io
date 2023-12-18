@@ -1,7 +1,6 @@
-
-baseURL = "https://example.org/"
-languageCode = "zh-ch"
-defaultContentLanguage = "zh-ch"
+baseURL = "https://pride7.github.io/"
+languageCode = "en-us"
+defaultContentLanguage = "zh-cn"
 title = "Pride7的博客"
 theme = "hugo-tranquilpeak-theme"
 #disqusShortname = "hugo-tranquilpeak-theme"
@@ -38,10 +37,7 @@ canonifyurls = true
   bio = "分享一些自己平时的见闻"
   job = "学生"
   location = "美国"
-  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   # gravatarEmail = "xsfeng07@gmail.com"
-  # Your profile picture
-  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "images/author.png"
   
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
@@ -98,7 +94,7 @@ canonifyurls = true
   # -----------
   # Description
   # -----------
-  description = "Hugo tranquilpeak theme demo"
+  description = "My blog"
 
   # ------------------
   # Syntax highlighter
@@ -145,7 +141,7 @@ canonifyurls = true
   #    large sidebar is swiped on all lower screens
   # 5: Display header bar on all screens and large sidebar is swiped on large screen
   # 6: Display header bar on all screens and medium sidebar is swiped
-  sidebarBehavior = 1
+  sidebarBehavior = 2
 
   # Customize link of author avatar in sidebar
   #  [params.sidebar.profile]
@@ -167,11 +163,14 @@ canonifyurls = true
 
   # Display thumbnail image of each post on index pages (false: disabled, true: enabled)
   thumbnailImage = true
+
   # Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`)
   # Set this value to `right` if you have old posts to keep the old style on them
   # and define `thumbnailImagePosition` on a post to overwrite this setting
   thumbnailImagePosition = "bottom"
+
   # Automatically select the cover image or the first photo from the gallery of a post if there is no thumbnail image as the thumbnail image
+
   # Set this value to `true` if you have old posts that use the cover image or the first photo as the thumbnail image
   # and set `autoThumbnailImage` to `false` on a post to overwrite this setting
   autoThumbnailImage = true
@@ -280,10 +279,26 @@ canonifyurls = true
   # --------------
   # Comment system
   # --------------
-  [params.comment]
-    [params.comment.disqus]
-      enable = true
-      shortname = "pride丶gd"
+
+  enableGitalk = true
+
+  [params.gitalk]
+    clientID = "239d64f9590342560e8c"
+    clientSecret = "b82b5eda231e75cc0f811bc702751f3f7890b490"
+    repo = "gitalk-comments"
+    owner = "pride7"
+    admin= "pride7"
+    id= "location.pathname" # The unique id of the page.
+    labels= "gitalk" # Github issue labels. If you used to use Gitment, you can change it
+    perPage= 15 # Pagination size, with maximum 100.
+    pagerDirection= "last" # Comment sorting direction, available values are 'last' and 'first'.
+    createIssueManually= false # If it is 'false', it is auto to make a Github issue when the administrators login.
+    distractionFreeMode= false # Enable hot key (cmd|ctrl + enter) submit comment.
+
+  #[params.comment]
+    # [params.comment.disqus]
+      # enable = true
+      # shortname = "pride丶gd"
     [params.comment.gitalk]
       enable = true
       clientId = "239d64f9590342560e8c"
@@ -308,9 +323,10 @@ canonifyurls = true
   #  url: /#search
   #  icon: search
   #  class: st-search-show-outputs
+  
   [params.header.rightLink]
-    class = ""
-    icon = ""
-    url = "/#about"
+    class = 'st-search-show-outputs'
+    icon = 'search'
+    url = '/#search'
 
 
