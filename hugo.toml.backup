@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh-cn'
+title = 'Pride7'
+theme = 'hugo-tranquilpeak-theme'
+
+[params]
+  dateFormat = "2006 January 2"
