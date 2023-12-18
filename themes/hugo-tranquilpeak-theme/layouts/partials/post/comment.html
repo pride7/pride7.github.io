@@ -43,7 +43,7 @@
           owner: '{{ .Site.Params.comment.gitalk.owner }}',
           admin: ['{{ .Site.Params.comment.gitalk.owner }}'],
           id: '{{ md5 .RelPermalink }}',
-          // ...{{ .Site.Params.comment.gitalk.options | jsonify | safeJS }}
+          ...{{ .Site.Params.comment.gitalk.options | jsonify | safeJS }}
         }).render('gitalk')
       })()
     </script>

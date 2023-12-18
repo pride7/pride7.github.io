@@ -307,12 +307,12 @@ canonifyurls = true
       admin = "pride7"
       repo = "gitalk-comments"
       # See all options: https://github.com/gitalk/gitalk#options
-      # [params.comment.gitalk.options]
-        # language = "zh"
-        # perPage = 10
-        # distractionFreeMode = false
-        # enableHotKey = true
-        # pagerDirection = "first"
+      [params.comment.gitalk.options]
+        #language = "zh"
+        #perPage = 10
+        #distractionFreeMode = false
+        #enableHotKey = true
+        #pagerDirection = "first"
 
   # --------------------
   # Header configuration
