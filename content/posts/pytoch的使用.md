@@ -1,12 +1,13 @@
 ---
 title: pytorch的使用
-date: 2023-12-18
+date: 2023-12-17
 categories:
   - 编程
 tags:
   - python
   - pytorch
 autoThumbnailImage: yes
+math: true
 #thumbnailImagePosition: left
 #thumbnailImage: //d1u9biwaxjngwg.cloudfront.net/chinese-test-post/vintage-140.jpg
 ---
