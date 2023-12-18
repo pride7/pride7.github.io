@@ -325,8 +325,8 @@ canonifyurls = true
   #  class: st-search-show-outputs
   
   [params.header.rightLink]
-    class = 'st-search-show-outputs'
-    icon = 'search'
+    class = ''
+    icon = ''
     url = '/#search'
 
 
