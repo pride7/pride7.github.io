@@ -6,7 +6,7 @@ categories:
 tags:
   - html
   - css
-sumary: "这是学习网页开发的一些笔记。"
+summary: "这是学习网页开发的一些笔记。"
 ---
 
 ## HTML 文档结构
