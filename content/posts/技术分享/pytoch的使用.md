@@ -8,8 +8,6 @@ tags:
   - pytorch
 autoThumbnailImage: yes
 math: true
-#thumbnailImagePosition: left
-#thumbnailImage: //d1u9biwaxjngwg.cloudfront.net/chinese-test-post/vintage-140.jpg
 ---
 
 pytorch已经用了很长一段时间了，但有时依然会遇到一些问题，先简单记录一下使用时应注意的地方。
