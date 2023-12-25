@@ -1,5 +1,6 @@
 ---
 title: web开发
+slug: web
 date: 2023-12-24
 categories:
   - 学习
