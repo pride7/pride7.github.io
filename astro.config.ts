@@ -18,6 +18,7 @@ export default defineConfig({
   ],
   markdown: {
     remarkPlugins: [
+      "remark-math",
       remarkToc,
       [
         remarkCollapse,
@@ -26,6 +27,11 @@ export default defineConfig({
         },
       ],
     ],
+    rehypePlugins: [
+            ['rehype-katex', {
+            // Katex plugin options
+            }]
+        ],
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true,
