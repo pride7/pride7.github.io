@@ -2,13 +2,15 @@
 title: 3 Convex functions
 author: pride7
 pubDatetime: 2024-01-27
-slug: cvx
+slug: cvx3
 featured: true
 # ogImage: ""
 tags: 
   - optimization
 description: "convex optimization第三章笔记"
 ---
+
+## Table of Contents
 
 ## 3.1 Basic properties and examples
 ### 3.1.1 Definition

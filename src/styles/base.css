@@ -4,22 +4,23 @@
 
 @layer base {
   :root,
+  :root,
   html[data-theme="light"] {
-    --color-fill: 251, 254, 251;
-    --color-text-base: 40, 39, 40;
-    --color-accent: 0, 108, 172;
-    --color-card: 230, 230, 230;
-    --color-card-muted: 205, 205, 205;
-    --color-border: 236, 233, 233;
-  }
+    --color-fill: 255, 255, 255;
+    --color-text-base: 0, 0, 0;
+    --color-accent: 88, 123, 207;
+    --color-card: 213, 233, 255;
+    --color-card-muted: 113, 143, 205;
+    --color-border: 88, 123, 207;
+}
   html[data-theme="dark"] {
-    --color-fill: 33, 39, 55;
-    --color-text-base: 234, 237, 243;
-    --color-accent: 255, 107, 1;
-    --color-card: 52, 63, 96;
-    --color-card-muted: 138, 51, 2;
-    --color-border: 171, 75, 8;
-  }
+  --color-fill: 0, 1, 35;
+  --color-accent: 97, 123, 255;
+  --color-text-base: 234, 237, 243;
+  --color-card: 33, 34, 83;
+  --color-card-muted: 12, 14, 79;
+  --color-border: 48, 63, 138;
+}
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
     display: none;
@@ -29,7 +30,7 @@
     display: block;
   }
   body {
-    @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base 
+    @apply flex min-h-[100svh] flex-col bg-skin-fill font-sans text-skin-base 
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
   section,
@@ -119,6 +120,11 @@
   blockquote {
     word-wrap: break-word;
   }
+
+  blockquote:first-child {
+    display: none;
+  }
+
 
   pre > code {
     white-space: pre;
