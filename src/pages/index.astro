@@ -9,6 +9,7 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
+import author from '../assets/images/author.png';
 
 const posts = await getCollection("blog");
 
@@ -23,7 +24,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <img src="../assets/images/author.png" width="100" class="rounded-full inline-block m-auto">
+      <img src={author.src} width="100" class="rounded-full inline-block m-auto">
       <h2 class="inline-block m-auto text-4xl font-bold">Pride7</h2>
       <a
         target="_blank"

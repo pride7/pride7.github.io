@@ -121,11 +121,6 @@
     word-wrap: break-word;
   }
 
-  blockquote:first-child {
-    display: none;
-  }
-
-
   pre > code {
     white-space: pre;
   }
