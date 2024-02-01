@@ -21,6 +21,7 @@
     "astro": "^4.2.1",
     "fuse.js": "^7.0.0",
     "github-slugger": "^2.0.0",
+    "mdit-plugin-callouts": "^1.2.0",
     "rehype-katex": "^7.0.0",
     "remark-collapse": "^0.1.2",
     "remark-math": "^6.0.0",
