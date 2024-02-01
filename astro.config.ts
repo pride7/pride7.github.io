@@ -5,7 +5,6 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
-import mdit-plugin-callouts from "mdit-plugin-callouts";
 
 // https://astro.build/config
 export default defineConfig({
@@ -29,10 +28,13 @@ export default defineConfig({
       ],
     ],
     rehypePlugins: [
-            ['rehype-katex', {
-            // Katex plugin options
-            }]
-        ],
+      [
+        "rehype-katex",
+        {
+          // Katex plugin options
+        },
+      ],
+    ],
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true,
