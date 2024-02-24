@@ -177,7 +177,7 @@ Such a point is sometimes called strictly feasible. Slater's theorem states that
 > Note: for $Ax=b$, when $b \notin \mathcal{R}(A)$, there is a $z$ with $A^{T}z=0,b^{T}z\ne 0$. (**A trick**)
 > Note: strong duality holds for any optimization problem with quadratic objective and one quadratic inequality constraint.
 
-## 5.2.5 Mixed strategies for matrix games #unread
+## 5.2.5 Mixed strategies for matrix games 
 
 # 5.3 Geometric interpretation
 
@@ -209,11 +209,11 @@ defines a supporting hyperplane to $\mathcal{G}$. (non vertical)
 
 - **Epigraph variation**
 
-## 5.3.2 Proof of strong duality under constraint qualification #unread
+## 5.3.2 Proof of strong duality under constraint qualification 
 
-## 5.3.3 Multicriterion interpretation #unread
+## 5.3.3 Multicriterion interpretation 
 
-# 5.4 Saddle-point interpretation #unread
+# 5.4 Saddle-point interpretation 
 
 # 5.5 Optimality conditions
 
@@ -223,7 +223,7 @@ If strong duality holds, then $x$ is primal optimal and $(\lambda,\nu)$ is dual 
 - $(\lambda,\nu)$ is feasible
 - $f_{0}(x)=g(\lambda,\nu)$
 
-## 5.5.1 Certificate of suboptimality and stopping criteria #unread
+## 5.5.1 Certificate of suboptimality and stopping criteria 
 
 ## 5.5.2 Complementary slackness
 
