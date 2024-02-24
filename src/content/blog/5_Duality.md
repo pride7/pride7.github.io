@@ -6,8 +6,9 @@ slug: cvx5
 featured: true
 # ogImage: ""
 tags:
-- optimization
-  description: "convex optimization第五章笔记"
+  - optimization
+
+description: "convex optimization第五章笔记"
 ---
 
 ## Table of Contents
