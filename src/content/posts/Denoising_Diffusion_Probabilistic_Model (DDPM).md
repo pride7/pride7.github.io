@@ -278,3 +278,5 @@ $$
 So we have
 ![DDPM_12](./images/DDPM_12.png)
 
+## Reference
+[1] Chan, Stanley H. "Tutorial on Diffusion Models for Imaging and Vision." arXiv preprint arXiv:2403.18103 (2024).
