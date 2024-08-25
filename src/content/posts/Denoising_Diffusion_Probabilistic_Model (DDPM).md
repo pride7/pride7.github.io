@@ -86,16 +86,26 @@ $$
 where $\overline{\alpha}_{t}=\prod_{i=1}^{t}\alpha_{i}$.
 
 **Proof.**
-$$\begin{aligned}\mathbf{x}_{t}&=\sqrt{\alpha_t}\mathbf{x}_{t-1}+\sqrt{1-\alpha_t}\boldsymbol{\epsilon}_{t-1}\\&=\sqrt{\alpha_t}(\sqrt{\alpha_{t-1}}\mathbf{x}_{t-2}+\sqrt{1-\alpha_{t-1}}\boldsymbol{\epsilon}_{t-2})+\sqrt{1-\alpha_t}\boldsymbol{\epsilon}_{t-1}\\&=\sqrt{\alpha_t\alpha_{t-1}}\mathbf{x}_{t-2}+\underbrace{\sqrt{\alpha_t}\sqrt{1-\alpha_{t-1}}\boldsymbol{\epsilon}_{t-2}+\sqrt{1-\alpha_t}\boldsymbol{\epsilon}_{t-1}}_{\mathbf{w}_1}.\end{aligned}$$
+$$
+\begin{aligned}\mathbf{x}_{t}&=\sqrt{\alpha_t}\mathbf{x}_{t-1}+\sqrt{1-\alpha_t}\boldsymbol{\epsilon}_{t-1}\\&=\sqrt{\alpha_t}(\sqrt{\alpha_{t-1}}\mathbf{x}_{t-2}+\sqrt{1-\alpha_{t-1}}\boldsymbol{\epsilon}_{t-2})+\sqrt{1-\alpha_t}\boldsymbol{\epsilon}_{t-1}\\&=\sqrt{\alpha_t\alpha_{t-1}}\mathbf{x}_{t-2}+\underbrace{\sqrt{\alpha_t}\sqrt{1-\alpha_{t-1}}\boldsymbol{\epsilon}_{t-2}+\sqrt{1-\alpha_t}\boldsymbol{\epsilon}_{t-1}}_{\mathbf{w}_1}.\end{aligned}
+$$
 The new covariance is
-$$\begin{aligned}\mathbb{E}[\mathbf{w}_{1}\mathbf{w}_{1}^{T}]&=[(\sqrt{\alpha_{t}}\sqrt{1-\alpha_{t-1}})^{2}+(\sqrt{1-\alpha_{t}})^{2}]\mathbf{I}\\&=[\alpha_t(1-\alpha_{t-1})+1-\alpha_t]\mathbf{I}=[1-\alpha_t\alpha_{t-1}]\mathbf{I}.\end{aligned}$$
+$$
+\begin{aligned}\mathbb{E}[\mathbf{w}_{1}\mathbf{w}_{1}^{T}]&=[(\sqrt{\alpha_{t}}\sqrt{1-\alpha_{t-1}})^{2}+(\sqrt{1-\alpha_{t}})^{2}]\mathbf{I}\\&=[\alpha_t(1-\alpha_{t-1})+1-\alpha_t]\mathbf{I}=[1-\alpha_t\alpha_{t-1}]\mathbf{I}.\end{aligned}
+$$
 We can show that the recursion is updated to become a linear combination of
 $\mathbf{x}_{t-2}$ and a noise vector $\boldsymbol\epsilon_t-2:$
-$$\begin{aligned}\mathbf{x}_{t}&=\sqrt{\alpha_{t}\alpha_{t-1}}\mathbf{x}_{t-2}+\sqrt{1-\alpha_{t}\alpha_{t-1}}\boldsymbol{\epsilon}_{t-2}\\&=\sqrt{\alpha_{t}\alpha_{t-1}\alpha_{t-2}}\mathbf{x}_{t-3}+\sqrt{1-\alpha_{t}\alpha_{t-1}\alpha_{t-2}}\boldsymbol{\epsilon}_{t-3}\\&=\vdots\\&=\sqrt{\prod_{i=1}^t\alpha_i}\mathbf{x}_0+\sqrt{1-\prod_{i=1}^t\alpha_i}\boldsymbol{\epsilon}_0.\end{aligned}$$
+$$
+\begin{aligned}\mathbf{x}_{t}&=\sqrt{\alpha_{t}\alpha_{t-1}}\mathbf{x}_{t-2}+\sqrt{1-\alpha_{t}\alpha_{t-1}}\boldsymbol{\epsilon}_{t-2}\\&=\sqrt{\alpha_{t}\alpha_{t-1}\alpha_{t-2}}\mathbf{x}_{t-3}+\sqrt{1-\alpha_{t}\alpha_{t-1}\alpha_{t-2}}\boldsymbol{\epsilon}_{t-3}\\&=\vdots\\&=\sqrt{\prod_{i=1}^t\alpha_i}\mathbf{x}_0+\sqrt{1-\prod_{i=1}^t\alpha_i}\boldsymbol{\epsilon}_0.\end{aligned}
+$$
 So, if we define $\overline{\alpha}_t=\prod_{i=1}^t\alpha_i$, we can show that
-$$\mathbf{x}_{t}=\sqrt{\overline{\alpha}_{t}}\mathbf{x}_{0}+\sqrt{1-\overline{\alpha}_{t}}\epsilon_{0}.$$
+$$
+\mathbf{x}_{t}=\sqrt{\overline{\alpha}_{t}}\mathbf{x}_{0}+\sqrt{1-\overline{\alpha}_{t}}\epsilon_{0}.
+$$
 In other words, the distribution $q_{\boldsymbol{\phi}}(\mathbf{x}_{t}|\mathbf{x}_{0})$ is
-$$\mathbf{x}_t\sim q_{\boldsymbol{\phi}}(\mathbf{x}_t|\mathbf{x}_0)=\mathcal{N}(\mathbf{x}_t\:|\:\sqrt{\overline{\alpha}_t}\mathbf{x}_0,\:(1-\overline{\alpha}_t)\mathbf{I}).$$
+$$
+\mathbf{x}_t\sim q_{\boldsymbol{\phi}}(\mathbf{x}_t|\mathbf{x}_0)=\mathcal{N}(\mathbf{x}_t\:|\:\sqrt{\overline{\alpha}_t}\mathbf{x}_0,\:(1-\overline{\alpha}_t)\mathbf{I}).
+$$
 ![DDPM_5](./images/DDPM_5.png)
 
 ## 4 Evidence Lower Bound
