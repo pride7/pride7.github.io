@@ -1,9 +1,5 @@
-# About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
+# 关于
+我是pride7，该博客用于记录和分享我的生活感悟、技术见解。在这里，你会找到我对各种话题的思考，包括人工智能、无线通信、优化算法等专业领域的知识分享，以及我在日常生活中的心得体会。我希望通过这个平台，不仅能与大家交流讨论，共同进步，还能留下自己成长的足迹。欢迎大家交流互动！
 
-::github{repo="saicaca/fuwari"}
+<!-- ::github{repo="pride7/myblog"} -->
 
-> ### Sources of images used in this site
-> - [Unsplash](https://unsplash.com/)
-> - [星と少女](https://www.pixiv.net/artworks/108916539) by [Stella](https://www.pixiv.net/users/93273965)
-> - [Rabbit - v1.4 Showcase](https://civitai.com/posts/586908) by [Rabbit_YourMajesty](https://civitai.com/user/Rabbit_YourMajesty)
