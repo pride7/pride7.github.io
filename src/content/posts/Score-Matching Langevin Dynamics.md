@@ -89,6 +89,8 @@ In DSM, the loss function is defined as follows.
 $$
 J_{\mathrm{DSM}}(\boldsymbol{\theta})\stackrel{\mathrm{def}}{=}\mathbb{E}_{q(\mathbf{x},\mathbf{x}^{\prime})}\left[\frac12\left\|\mathbf{s}_{\boldsymbol{\theta}}(\mathbf{x})-\nabla_{\mathbf{x}}q(\mathbf{x}|\mathbf{x}^{\prime})\right\|^2\right]
 $$
+The idea comes from the Denoising Autoencoder approach of using pairs of clean and corrupted examples $(\mathbf{x},\mathbf{x}')$. In the generative model, $\mathbf{x}'$ can be seen as the $\mathbf{x}_{t}$.
+
 The conditional distribution $q(\mathbf{x}|\mathbf{x}^{\prime})$ does not require an approximation. In the special case where $q(\mathbf{x}|\mathbf{x}^{\prime})=\mathcal{N}(\mathbf{x}\mid\mathbf{x}^{\prime},\sigma^2)$, we can let $\mathbf{x}=\mathbf{x}^\prime+\sigma\mathbf{z}.$ This will give us
 $$
 \begin{aligned}
@@ -96,18 +98,20 @@ $$
 \end{aligned}
 $$
 As a result, the loss function of the denoising score matching becomes
-$$\begin{aligned}J_{\mathrm{DSM}}(\boldsymbol{\theta})&\stackrel{\mathrm{def}}{=}\mathbb{E}_{q(\mathbf{x},\mathbf{x}^{\prime})}\left[\frac12\left\|\mathbf{s}_{\boldsymbol{\theta}}(\mathbf{x})-\nabla_{\mathbf{x}}q(\mathbf{x}|\mathbf{x}^{\prime})\right\|^2\right]\\&=\mathbb{E}_{q(\mathbf{x}^{\prime})}\left[\frac12\left\|\mathbf{s}_{\boldsymbol{\theta}}(\mathbf{x}^{\prime}+\sigma\mathbf{z})+\frac{\mathbf{z}}{\sigma^2}\right\|^2\right].\end{aligned}$$
+$$
+\begin{aligned}J_{\mathrm{DSM}}(\boldsymbol{\theta})&\stackrel{\mathrm{def}}{=}\mathbb{E}_{q(\mathbf{x},\mathbf{x}^{\prime})}\left[\frac12\left\|\mathbf{s}_{\boldsymbol{\theta}}(\mathbf{x})-\nabla_{\mathbf{x}}q(\mathbf{x}|\mathbf{x}^{\prime})\right\|^2\right]\\&=\mathbb{E}_{q(\mathbf{x}^{\prime})}\left[\frac12\left\|\mathbf{s}_{\boldsymbol{\theta}}(\mathbf{x}^{\prime}+\sigma\mathbf{z})+\frac{\mathbf{z}}{\sigma^2}\right\|^2\right].\end{aligned}
+$$
 > The gradient operation cancels $\mathbf{x}$.
 
+> [!IMPORTANT] 
+> The Denoising Score Matching has a loss function defined as
+> $$
+> J_{\mathrm{DSM}}(\boldsymbol{\theta})=\mathbb{E}_{p(\mathbf{x})}\left[\frac12\left\|\mathbf{s}_{\boldsymbol{\theta}}(\mathbf{x}+\sigma\mathbf{z})+\frac{\mathbf{z}}{\sigma^2}\right\|^2\right]
+> $$
 - The quantity $\mathbf{x}+\sigma\mathbf{z}$ is effectively adding noise $\sigma\textbf{z}$  to a clean image $\mathbf{x}$. 
 - The score function $s_{{\boldsymbol{\theta}}}$ is supposed to take this noisy image and predict the noise $\frac {\mathbf{z} }{\sigma ^2}.$ 
 - Predicting noise is equivalent to <font color="#ff0000">denoising</font>, because any denoised image plus the predicted noise will give us the noisy observation. 
 ![SMLD](./images/SMLD.png)
-> [!CAUTION] 
-> **Why we can assume $q(\mathbf{x}|\mathbf{x}')$ is Gaussian distribution?**
-> My understanding:
-> - Since $\mathbf{x}$ and $\mathbf{x}'$ follows from the same distribution, the error can just be modeled as the gaussian noise.
-> - TBD
 
 The **training** step can simply described as follows: You give us a training dataset $\{\mathbf{x}^{(\ell)}\}_{\ell=1}^L$, we train a network $\boldsymbol{\theta}$ with the goal to
 $$
