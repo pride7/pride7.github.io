@@ -60,16 +60,20 @@ draft: false
 使用全局变量的好处在于不需要闭包，并且无需返回多个函数，使用起来更加方便。不过，可能会因为使用到 `context` 而稍微影响速度。
 首先，可以在模板中定义全局变量，例如：
 ```typst
-// 定义全局配置 
-#let slide-config = ( 
-  title: "Default Presentation Title", 
-  primary-color: blue, 
-  secondary-color: gray, 
-  font-size: 24pt, 
-) 
-// 更新配置的函数 
-#let update-config(new-config) = { 
-  slide-config = slide-config + new-config 
+// 定义初始配置
+#let initial-config = (
+  title: "Default Presentation Title",
+  primary-color: blue,
+  secondary-color: gray,
+  font-size: 24pt,
+)
+
+// 创建一个状态变量来存储配置
+#let config-state = state("config", initial-config)
+
+// 更新配置的函数
+#let update-config(new-config) = {
+  config-state.update(current => current + new-config)
 }
 ```
 然后在编写 `slide` 函数时，直接调用全局变量即可，而无需将其作为输入。但需要注意，调用全局变量时使用 `get()` 函数，并且必须在 `context` 环境下，因此通常的写法是：
