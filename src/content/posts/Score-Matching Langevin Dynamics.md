@@ -41,9 +41,9 @@ $\mathbf{x}.$ For any high-dimensional distribution $p(\mathbf{x})$, the gradien
 $$\nabla_\mathbf{x}\log p(\mathbf{x})=\text{a vector field}=\begin{bmatrix}\frac{\partial\log p(\mathbf{x})}{\partial x},&\frac{\partial\log p(\mathbf{x})}{\partial y}\end{bmatrix}^T$$
 
 **Geometric Interpretations of the Score Function:**
-$\bullet$ The magnitude of the vectors are the strongest at places where the change of $\log p(\mathbf{x})$ is the biggest. Therefore, in regions where $\log p(\mathbf{x})$ is close to the peak will be mostly very weak gradient.
-$\bullet$ The vector field indicates how a data point should travel in the contour map. 
-$\bullet$ In physics, the score function is equivalent to the "drift". This name suggests how the diffusion particles
+- The magnitude of the vectors are the strongest at places where the change of $\log p(\mathbf{x})$ is the biggest. Therefore, in regions where $\log p(\mathbf{x})$ is close to the peak will be mostly very weak gradient.
+- The vector field indicates how a data point should travel in the contour map. 
+- In physics, the score function is equivalent to the "drift". This name suggests how the diffusion particles
 should flow to the lowest energy state.
 
 ## 3 Score Matching Techniques
@@ -67,7 +67,7 @@ Since $q(\mathbf{x})$ is an approximation to $p(\mathbf{x})$ which is never acce
 > J_{\mathrm{ESM}}(\boldsymbol{\theta})\stackrel{\mathrm{def}}{=}\mathbb{E}_{q(\mathbf{x})}\|\mathrm{s}_{\boldsymbol{\theta}}(\mathbf{x})-\nabla_{\mathbf{x}}\log q(\mathbf{x})\|^2
 > $$
 
-By substituting the kernel de}& \text{nsity estimation, we can show that the loss is
+By substituting the kernel density estimation, we can show that the loss is
 $$
 \begin{aligned}
 J_{\mathrm{ESM}}(\theta  )&\stackrel{\mathrm{def}}{=}\mathbb{E}_{q(\mathbf{x})}\|\mathrm{s}_{\boldsymbol{\theta}}(\mathbf{x})-\nabla_{\mathbf{x}}\log q(\mathbf{x})\|^2 \\
