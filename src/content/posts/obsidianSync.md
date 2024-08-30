@@ -3,7 +3,7 @@ title: obsidian同步
 published: 2023-10-10
 description: 关于实现obsidian三端同步的方法。
 # image: 
-tags: [github, obsidian]
+tags: [obsidian]
 category: 技术
 draft: false
 ---

@@ -3,7 +3,7 @@ title: 关于半正定规划(SDP)的一道有趣题目
 published: 2024-02-20
 description: 这道题目有点意思，想了很久。
 # image: 
-tags: [凸优化, 半正定规划]
+tags: [凸优化]
 category: 学习
 draft: false
 ---
