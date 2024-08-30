@@ -81,7 +81,7 @@ Then, following the discretization scheme, we can show that
 $$
 \begin{aligned}\mathbf{x}_{i-1}&=(1+\frac{\beta_i}2)\bigg[\mathbf{x}_i+\frac{\beta_i}2\nabla_\mathbf{x}\log p_i(\mathbf{x}_i)\bigg]+\sqrt{\beta_i}\mathbf{z}_i\\&\approx\frac1{\sqrt{1-\beta_i}}\left[\mathbf{x}_i+\frac{\beta_i}2\nabla_\mathbf{x}\log p_i(\mathbf{x}_i)\right]+\sqrt{\beta_i}\mathbf{z}_i,\end{aligned}
 $$
-where $p_i(\mathbf{x})$ is the probability density function of $\mathbf{x}$ at time $i.$ For practical implementation, we can replace $\nabla_\mathbf{x}\log p_i(\mathbf{x}_i)$ by the estimated score function $\mathbf{s}_\boldsymbol{\theta}(\mathbf{x}_i).$
+where $p_i(\mathbf{x})$ is the probability density function of $\mathbf{x}$ at time $i.$ For practical implementation, we can replace $\nabla_\mathbf{x}\log p_i(\mathbf{x}_i)$ by the estimated score function $\mathbf{s}_\boldsymbol{\theta}(\mathbf{x}_i)$.
 
 ## 3 Stochastic Differential Equation for SMLD
 Although there isn't a forward diffusion step, if we divide the noise scale (e.g., $\mathbf{x}+\sigma \mathbf{z}$) in the SMLD training into $N$ levels, then the recursion should follow a Markov chain
