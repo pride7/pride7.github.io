@@ -1,0 +1,6 @@
+---
+import { comment } from "../config";
+import GiscusComment from "./GiscusComment.astro";
+---
+
+{comment.enable && comment.type === "giscus" && <GiscusComment />}

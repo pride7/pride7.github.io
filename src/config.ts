@@ -86,3 +86,24 @@ export const licenseConfig: LicenseConfig = {
   name: 'CC BY-NC-SA 4.0',
   url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 }
+
+export const comment = {
+  enable: true,
+  type: "giscus", 
+  giscusConfig: {
+    "data-repo": "pride7/pride7.github.io",
+    "data-repo-id": "R_kgDOMn9H4Q",
+    "data-category": "Announcements",
+    "data-category-id": "DIC_kwDOMn9H4c4CiHl8",
+    "data-mapping": "title",
+    "data-strict": "0",
+    "data-reactions-enabled": "1",
+    "data-emit-metadata": "0",
+    "data-input-position": "top",
+    "data-theme": "light",
+    "data-lang": "zh-CN",
+    "data-loading": "lazy",
+    crossorigin: "anonymous",
+  },
+};
+
