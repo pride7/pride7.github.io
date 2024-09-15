@@ -1,5 +1,5 @@
 ---
-title: Python中Paser的使用
+title: Python中Parser的使用
 published: 2024-08-30
 description: 学习如何在Python中使用argparse模块来定义和管理命令行参数。
 tags:
