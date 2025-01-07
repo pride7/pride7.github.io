@@ -7,7 +7,6 @@ tags:
 category: 学习
 draft: false
 ---
-## Content
 ## 1 Forward and Backward Iterations in SDE
 The basic idea comes from gradient descent algorithm.
 $$
@@ -78,10 +77,13 @@ $$
 \end{aligned}
 $$
 Then, following the discretization scheme, we can show that
+
 $$
 \begin{aligned}\mathbf{x}_{i-1}&=(1+\frac{\beta_i}2)\bigg[\mathbf{x}_i+\frac{\beta_i}2\nabla_\mathbf{x}\log p_i(\mathbf{x}_i)\bigg]+\sqrt{\beta_i}\mathbf{z}_i\\&\approx\frac1{\sqrt{1-\beta_i}}\left[\mathbf{x}_i+\frac{\beta_i}2\nabla_\mathbf{x}\log p_i(\mathbf{x}_i)\right]+\sqrt{\beta_i}\mathbf{z}_i,\end{aligned}
 $$
-where $p_i(\mathbf{x})$ is the probability density function of $\mathbf{x}$ at time $i.$ For practical implementation, we can replace $\nabla_\mathbf{x}\log p_i(\mathbf{x}_i)$ by the estimated score function $\mathbf{s}_\boldsymbol{\theta}(\mathbf{x}_i)$.
+
+where $p_i(\mathbf{x})$ is the probability density function of $\mathbf{x}$ at time $i$. 
+For practical implementation, we can replace $\nabla_\mathbf{x}\log p_i(\mathbf{x}_i)$ by the estimated score function $\mathbf{s}_{\boldsymbol{\theta}}(\mathbf{x}_i) $.
 
 ## 3 Stochastic Differential Equation for SMLD
 Although there isn't a forward diffusion step, if we divide the noise scale (e.g., $\mathbf{x}+\sigma \mathbf{z}$) in the SMLD training into $N$ levels, then the recursion should follow a Markov chain
@@ -98,9 +100,13 @@ Therefore, given a sequence of noise levels, above equation will indeed generate
 statistics will satisfy the desired property.
 
 Assuming that in the $\operatorname*{limit}\left\{\sigma_i\right\}_{i=1}^N$becomes the continuous time $\sigma(t)$ for $0\leq t\leq1$, and $\{\mathbf{x}_i\}_i=1^N$ becomes $\mathbf{x}(t)$ where $\mathbf{x}_i=\mathbf{x}(\frac iN)$ if we let $t\in\{0,\frac1N,\ldots,\frac{N-1}N\}.$ Then we have
-$$\begin{aligned}\mathbf{x}(t+\Delta t)&=\mathbf{x}(t)+\sqrt{\sigma(t+\Delta t)^2-\sigma(t)^2}\mathbf{z}(t)\\&\approx\mathbf{x}(t)+\sqrt{\frac{d[\sigma(t)^2]}{dt}\Delta t}\:\mathbf{z}(t).\end{aligned}$$
+$$
+\begin{aligned}\mathbf{x}(t+\Delta t)&=\mathbf{x}(t)+\sqrt{\sigma(t+\Delta t)^2-\sigma(t)^2}\mathbf{z}(t)\\&\approx\mathbf{x}(t)+\sqrt{\frac{d[\sigma(t)^2]}{dt}\Delta t}\:\mathbf{z}(t).\end{aligned}
+$$
 At the limit when $\Delta t\to0$, the equation converges to
-$$d\mathbf{x}=\sqrt{\frac{d[\sigma(t)^2]}{dt}}\:d\mathbf{w}.$$
+$$
+d\mathbf{x}=\sqrt{\frac{d[\sigma(t)^2]}{dt}}\:d\mathbf{w}.
+$$
 
 > [!NOTE] 
 > The forward sampling equation of **SMLD** can be written as an SDE via
