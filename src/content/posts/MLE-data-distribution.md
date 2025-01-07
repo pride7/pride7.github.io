@@ -3,8 +3,7 @@ title: How Log-Likelihood Helps Approximate the True Data Distribution?
 published: 2024-09-19
 description: Some thoughts about why we use log-likelihood as the loss function when we approximate the true data distribution.
 tags:
-  - MLE
-  - ML
+  - 机器学习
 category: 学习
 draft: false
 ---

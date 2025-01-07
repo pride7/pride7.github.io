@@ -1,7 +1,7 @@
 ---
-title: 10 Actor-Critic Methods
+title: Actor-Critic Methods
 published: 2024-06-16
-description: Mathematical Foundations of Reinforcement Learning 第十章的笔记
+description: 强化学习数学基础第十章学习笔记 - Mathematical Foundations of Reinforcement Learning Chapter 10 Notes
 tags:
   - 强化学习
 category: 学习

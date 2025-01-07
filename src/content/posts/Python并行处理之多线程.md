@@ -3,9 +3,8 @@ title: Python并行处理之多线程
 published: 2024-08-28
 description: 在跑项目代码中利用python多线程技术的总结。
 tags:
-  - python
-  - 多线程
-category: 技术
+  - DevTools
+category: 工具
 draft: false
 ---
 本文将简单讨论Python中的多线程技术。

@@ -3,9 +3,8 @@ title: Python中Parser的使用
 published: 2024-08-30
 description: 学习如何在Python中使用argparse模块来定义和管理命令行参数。
 tags:
-  - python
-  - cli
-category: 技术
+  - DevTools
+category: 工具
 draft: false
 ---
 在使用Python脚本时，能够灵活地管理命令行参数是非常有帮助的，尤其是在运行一些实验的代码时。`argparse`模块就是这样一个强大的工具，它能让你轻松定义和处理各种命令行参数。接下来，让我们通过一个简单的例子来了解它的使用方法。

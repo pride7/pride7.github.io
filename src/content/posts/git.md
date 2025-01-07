@@ -3,8 +3,8 @@ title: git的基本使用
 published: 2023-12-23
 description: 关于git的基本使用，本文基于Pro Git第二版。
 # image: 
-tags: [git]
-category: 技术
+tags: [CLI]
+category: 工具
 draft: false
 ---
 

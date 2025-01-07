@@ -3,8 +3,8 @@ title: Astro架构的项目结构
 published: 2024-09-14
 description: Astro的项目结构
 tags:
-  - Astro
-category: 技术
+  - DevTools
+category: 工具
 draft: false
 date_created: 2024-09-14-周六
 ---

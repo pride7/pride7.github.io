@@ -3,7 +3,7 @@ title: 矩阵的逆
 published: 2023-10-25
 description: 关于矩阵逆的一些简单理解。
 # image: 
-tags: [矩阵分析]
+tags: [数学]
 category: 学习
 draft: false
 ---

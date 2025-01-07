@@ -1,9 +1,9 @@
 ---
-title: 3 Convex functions
+title: "Convex functions"
 published: 2024-01-27
 description: convex optimization第三章笔记。
 # image: 
-tags: [凸优化]
+tags: [数学]
 category: 学习
 draft: false
 ---

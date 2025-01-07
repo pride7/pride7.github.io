@@ -1,9 +1,9 @@
 ---
-title: 2 Convex sets
+title: "Convex sets"
 published: 2024-01-21
 description: convex optimization第二章笔记。
 # image: 
-tags: [凸优化]
+tags: [数学]
 category: 学习
 draft: false
 ---

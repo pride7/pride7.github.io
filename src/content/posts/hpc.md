@@ -3,8 +3,8 @@ title: 使用HPC遇到的问题
 published: 2023-09-09
 description: 这篇帖子将简述本人在连接学校服务器运行代码过程中遇到的问题。
 # image: 
-tags: [shell, 连接远程服务器, Linux]
-category: 技术
+tags: [CLI, Linux]
+category: 工具
 draft: false
 ---
 

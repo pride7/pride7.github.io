@@ -3,8 +3,8 @@ title: git本地配置不同账户
 published: 2023-12-16
 description: 关于在本地配置不同的github账号进行pull和push。
 # image: 
-tags: [git]
-category: 技术
+tags: [CLI]
+category: 工具
 draft: false
 ---
 

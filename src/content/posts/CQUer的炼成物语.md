@@ -3,7 +3,7 @@ title: CQUerの炼成物语
 published: 2024-09-01
 description: 做一名优秀的炼金术师。
 tags: []
-category: CQUers
+category: 感悟
 draft: true
 ---
 今天开始，我想持续更新一个系列，名为《CQUerの炼成物语》。作为过来人，我认为自己的这些经历也算是有些趣味，有成功的经验，也有失败的教训，也因此，有很多经验感悟想与大家分享。希望可以带给大家一些帮助。

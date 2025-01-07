@@ -3,7 +3,7 @@ title: Multi-Arm Bandits
 published: 2024-09-18
 description: "Note for Chapter 2 of RL: an introduction"
 tags:
-  - RL
+  - 强化学习
 category: 学习
 draft: false
 date_created: 2024-09-18-周三

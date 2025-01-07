@@ -3,8 +3,8 @@ title: Typst制作slides模板
 published: 2024-08-25
 description: 使用Typst制作slides模板的教程
 tags:
-  - typst
-category: 技术
+  - Productivity
+category: 工具
 draft: false
 ---
 在制作 Slides 过程中，配置文件的设置是关键的一步。这意味着，在使用模板时，我们会输入新的配置信息，并且所有相关的函数都应该以这些新的配置信息为输入。

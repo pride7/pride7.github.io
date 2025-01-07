@@ -3,8 +3,8 @@ title: 使用Git同步本地与远程仓库
 published: 2024-09-23
 description: 在做项目时，经常会遇到在本地和远程都需要跑项目的时候，这种时候利用git进行同步管理就很方便。
 tags:
-  - git
-category: 技术
+  - CLI
+category: 工具
 draft: false
 ---
 该教程主要源自于我跑项目代码时，大多数时候在服务器上跑，少部分时候会在自己电脑上测试，因此也需要进行同步，方便管理。

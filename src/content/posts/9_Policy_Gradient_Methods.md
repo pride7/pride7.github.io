@@ -1,7 +1,7 @@
 ---
-title: 9 Policy Gradient Methods
+title: "Policy Gradient Methods"
 published: 2024-06-15
-description: Mathematical Foundations of Reinforcement Learning 第九章的笔记
+description: 强化学习数学基础第九章学习笔记 - Mathematical Foundations of Reinforcement Learning Chapter 9 Notes
 tags:
   - 强化学习
 category: 学习
