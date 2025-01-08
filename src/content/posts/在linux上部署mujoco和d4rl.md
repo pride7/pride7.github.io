@@ -43,7 +43,7 @@ pip install mujoco_py
 import mujoco_py
 ```
 
-### 常见错误1 --- pip install 'cython<3'​
+### 常见错误1 --- `pip install 'cython<3'`​
 
 注意：Cython的版本需要<3，运行
 
@@ -51,7 +51,7 @@ import mujoco_py
 pip install 'cython<3'
 ```
 
-### 常见错误2 --- distutils.errors.CompileError: command 'gcc' failed with exit code 1​
+### 常见错误2 --- `distutils.errors.CompileError: command 'gcc' failed with exit code 1`​
 
 此时退出python环境，运行
 
@@ -81,13 +81,21 @@ conda install -c menpo glfw3
 export CPATH=$CONDA_PREFIX/include
 ```
 
-最后安装patchelf
+### 常见错误3 ---`No module named 'numpy.core.\_multiarray\_umath'​`
+
+这个是因为numpy的版本太新了，需要降级
+
+```shell
+conda install numpy=2.1.2
+```
+
+## 3 安装patchelf
 
 ```bash
 pip install patchelf
 ```
 
-## 3 安装d4rl
+## 4 安装d4rl
 
 ```bash
 pip install git+https://github.com/Farama-Foundation/d4rl@master#egg=d4rl
