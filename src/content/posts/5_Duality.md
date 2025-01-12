@@ -7,18 +7,18 @@ tags: [数学]
 category: 学习
 draft: false
 ---
-## 5.1 The Lagrange dual function
+## 1 The Lagrange dual function
 
-### 5.1.1 The Lagrangian
+### 1.1 The Lagrangian
 
-### 5.1.2 The Lagrange dual function
+### 1.2 The Lagrange dual function
 
 - is always concave.
 - take care the case where the $L$ is not differentiable.
 
-### 5.1.3 Lower bounds on optimal value
+### 1.3 Lower bounds on optimal value
 
-### 5.1.4 Linear approximation interpretation
+### 1.4 Linear approximation interpretation
 
 The Lagrangian and lower bound property can be interpreted as a linear approximation of the indicator functions of the sets $\{ 0 \}$ and $-\mathbb{R}_{+}$.
 
@@ -43,7 +43,7 @@ and similarly, $I_{0}$ is the indicator function of $\{ 0 \}$.
 > Note: 通过 indicator function 去除 constraints，如果不满足则设置很大的惩罚。
 > Note: 整个思想其实就是， replacing the **hard** constraints with **soft** versions.
 
-### 5.1.5 Examples
+### 1.5 Examples
 
 - Least-squares solution of linear equations
 - Standard form LP
@@ -66,7 +66,7 @@ and similarly, $I_{0}$ is the indicator function of $\{ 0 \}$.
 > - **Lagrangian** is a good way to obtain a lower bound for some problem. This can be useful when we need to analyze some algorithms. (I guess)
 > - A another way to get o lower bound is to **augment its feasible set**. (relaxation with constraints)
 
-### 5.1.6 The Lagrange dual function and conjugate functions
+### 1.6 The Lagrange dual function and conjugate functions
 
 Consider an optimization problem with linear inequality and equality constraints,
 
@@ -98,7 +98,7 @@ $$
 
 > Note: an equivalent form of $x^{T}Sx$: $\mathbf{tr}(xx^{T}S)$.
 
-## 5.2 The Lagrange dual problem
+## 2 The Lagrange dual problem
 
 $$
 \begin{align}
@@ -112,7 +112,7 @@ $$
 - The **dual feasible** is to describe a pair $(\lambda,\nu)$ with $\lambda \geq 0$ and $g(\lambda,\nu)>-\infty$.
 - The Lagrange dual problem is **a convex optimization problem**. This is the case whether or not the primal problem is convex.
 
-### 5.2.1 Making dual constraints explicit
+### 2.1 Making dual constraints explicit
 
 The domain of the dual function
 
@@ -123,7 +123,7 @@ $$
 - Lagrange dual of standard form LP
 - Lagrange dual of inequality form LP
 
-### 5.2.2 Weak duality
+### 2.2 Weak duality
 
 We denote the optimal value of the Lagrange dual problem as $d^*$. Then, we have a simple inequality:
 
@@ -134,7 +134,7 @@ $$
 - The weak duality inequality holds when $d^*$ and $p^*$ are infinite.
 - The _optimal duality gap_ of the original problem is $p^*-d^*$, which is always nonnegative.
 
-### 5.2.3 Strong duality and Slater's constraint qualification
+### 2.3 Strong duality and Slater's constraint qualification
 
 If the equality
 
@@ -159,7 +159,7 @@ Such a point is sometimes called strictly feasible. Slater's theorem states that
 - also guarantees that the dual optimum is **attained** when $d^*>-\infty$.
 - The affine inequalities do not need to hold with strict inequality.
 
-### 5.2.4 Examples
+### 2.4 Examples
 
 - Least-squares solution of linear equations
 - Lagrange dual of LP: One of the two is feasible, then the strong duality holds.
@@ -171,11 +171,11 @@ Such a point is sometimes called strictly feasible. Slater's theorem states that
 > Note: for $Ax=b$, when $b \notin \mathcal{R}(A)$, there is a $z$ with $A^{T}z=0,b^{T}z\ne 0$. (**A trick**)
 > Note: strong duality holds for any optimization problem with quadratic objective and one quadratic inequality constraint.
 
-### 5.2.5 Mixed strategies for matrix games 
+### 2.5 Mixed strategies for matrix games 
 
-## 5.3 Geometric interpretation
+## 3 Geometric interpretation
 
-### 5.3.1 Weak and strong duality via set of values
+### 3.1 Weak and strong duality via set of values
 
 $$
 \mathcal{G}=\{(f_1(x),\ldots,f_m(x),h_1(x),\ldots,h_p(x),f_0(x))\in\mathbf{R}^m\times\mathbf{R}^p\times\mathbf{R}\mid x\in\mathcal{D}\}
@@ -203,13 +203,13 @@ defines a supporting hyperplane to $\mathcal{G}$. (non vertical)
 
 - **Epigraph variation**
 
-### 5.3.2 Proof of strong duality under constraint qualification 
+### 3.2 Proof of strong duality under constraint qualification 
 
-### 5.3.3 Multicriterion interpretation 
+### 3.3 Multicriterion interpretation 
 
-## 5.4 Saddle-point interpretation 
+## 4 Saddle-point interpretation 
 
-## 5.5 Optimality conditions
+## 5 Optimality conditions
 
 If strong duality holds, then $x$ is primal optimal and $(\lambda,\nu)$ is dual optimal if:
 
@@ -217,9 +217,9 @@ If strong duality holds, then $x$ is primal optimal and $(\lambda,\nu)$ is dual 
 - $(\lambda,\nu)$ is feasible
 - $f_{0}(x)=g(\lambda,\nu)$
 
-### 5.5.1 Certificate of suboptimality and stopping criteria 
+### 5.1 Certificate of suboptimality and stopping criteria 
 
-### 5.5.2 Complementary slackness
+### 5.2 Complementary slackness
 
 assume $x$ satisfies the primal constraints and $\lambda\geq0$
 
@@ -238,7 +238,7 @@ equality $f_0(x)=g(\lambda,\nu)$ holds if and only if the two inequalities hold 
   $$\lambda_i>0\quad\Longrightarrow\quad f_i(x)=0,\quad f_i(x)<0\quad\Longrightarrow\quad\lambda_i=0$$
   this is known as complementary slackness.
 
-### 5.5.3 KKT optimality conditions
+### 5.3 KKT optimality conditions
 
 if strong duality holds, then $x$ is primal optimal and $(\lambda,\nu)$ is dual optimal if
 
@@ -258,9 +258,9 @@ $$
 
 conditions 1,2,3,4' are known as Karush-Kuhn- Tucker (KKT) conditions.
 
-## 5.6 Perturbation and Sensitivity analysis
+## 6 Perturbation and Sensitivity analysis
 
-### 5.6.1 The perturbed problem
+### 6.1 The perturbed problem
 
 $$
 \begin{align}
@@ -283,7 +283,7 @@ $$
 - $p^{*}(0,0)=p^{*}$
 - when the original problem is convex, the function $p^{*}$ is a convex function of $u$ and $v$.
 
-### 5.6.2 A global inequality
+### 6.2 A global inequality
 
 Assume that **strong duality holds**, and that the dual optimum is attained. Let $(\lambda^{*},v^{*})$ be optimal for the dual of the _unperturbed problem_. Then for all $u$ and $v$ we have
 
@@ -301,7 +301,7 @@ $$
 
 > The inequality just gives a **lower bound** on the perturbed optimal value.
 
-### 5.6.3 Local sensitivity analysis
+### 6.3 Local sensitivity analysis
 
 Suppose that $p^{*}(u,v)$ is differentiable at $u=0,v=0$. Then, provided strong duality holds, the optimal dual variables $\lambda^{*},\nu^{*}$ are related to the gradient of $p^{*}$ at $u=0,v=0$:
 
@@ -315,7 +315,7 @@ We suppose that $f_{i}(x^{*})=0$ (active). The $i$ th optimal Lagrange multiplie
 - If $\lambda_{i}^{*}$ is small, the constraint can be loosened or tightened a bit without much effect on the optimal value
 - If $\lambda_{i}^{*}$ is large, it means that if the constraint is loosened or tightened a bit, the effect on the optimal value will be great
 
-## 5.7 Examples
+## 7 Examples
 
 Simple equivalent reformulations of a problem can lead to very different dual problems.
 
@@ -323,7 +323,7 @@ Simple equivalent reformulations of a problem can lead to very different dual pr
 - Transforming the objective
 - Implicit constraints: make the explicit constraints implicit
 
-## 5.8 Semidefinite optimization
+## 8 Semidefinite optimization
 
 $$
 \begin{align}
@@ -351,7 +351,7 @@ $$
 \left.g(Z)=\inf_xL(x,Z)=\left\{\begin{array}{ll}-\operatorname{tr}(GZ)&\operatorname{tr}(F_iZ)+c_i=0,&i=1,\ldots,n\\-\infty&\text{otherwise}\end{array}\right.\right.
 $$
 
-### 5.8.1 Dual semidefinite program
+### 8.1 Dual semidefinite program
 
 $$
 \begin{align}
@@ -377,7 +377,7 @@ $$
 >
 > For example, let $X=Q\Sigma^{\frac{1}{2}}\Sigma^{\frac{1}{2}}Q^T=VV^T$
 
-### 5.8.2 complementary slackness
+### 8.2 complementary slackness
 
 the primial and dual object values at feasible $x, Z$ are equal if
 
@@ -385,7 +385,7 @@ $$
 0= \text{tr}(XZ) \quad \text{where} \ X=G-x_{1}F_{1}-\cdots - x_{n}F_{n}
 $$
 
-## 5.9 Theorems of alternatives
+## 9 Theorems of alternatives
 
 **two related fesibility problems**
 
@@ -394,8 +394,8 @@ $$
 
 > wear alternative is easy to check, for strong alternatives, we need to check both infeasible is impossible
 
-### 5.9.1 Nonlinear inequalities
+### 9.1 Nonlinear inequalities
 
-### 5.9.2 Theorem of alternatives for linear matrix inequality
+### 9.2 Theorem of alternatives for linear matrix inequality
 
 > we can see that the proof of above questions is achieved by **strong duality**.

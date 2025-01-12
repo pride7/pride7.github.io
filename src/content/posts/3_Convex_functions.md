@@ -8,10 +8,8 @@ category: 学习
 draft: false
 ---
 
-## Table of Contents
-
-## 3.1 Basic properties and examples
-### 3.1.1 Definition
+## 1 Basic properties and examples
+### 1.1 Definition
 > [!note]  Convex
 > $f: \mathbb{R}^{n} \to \mathbb{R}$ is convex if $\text{dom}\ f$ is convex set and 
 > $$ 
@@ -34,7 +32,7 @@ draft: false
 > - can check convexity of $f$ by checking convexity of functions of one variable. (换句话讲，可以限制在一条线上来判断是否是凸函数，这也就变成一个标量) 
 
 > 定义 (矩阵仿射函数): $f(X)=\text{tr}(A^{T}X)+b$
-### 3.1.2 Extended-value extensions
+### 1.2 Extended-value extensions
 
 > [!NOTE] Extended-value extension
 > - 通常用 $\tilde{f}$ 来表示。
@@ -53,7 +51,7 @@ draft: false
 > $$ 
 > <span style="background:#d3f8b6">关于这个函数有一些很重要的 trick：</span>
 > - $\underset{C}{\min}\ f =\min\ f+\tilde{I}_{C}$ ：这个技巧在后面很有用
-### 3.1.3 Fist-order conditions
+### 1.3 Fist-order conditions
 >[!note] First-order condition
 >Suppose $f$ is differentiable. Then $f$ is convex if and only if  $\textbf{dom}\ f$ is convex and 
 > $$
@@ -65,7 +63,7 @@ draft: false
 > - 同样该性质可以描述 `严格凸`（此时注意等号仅 $x=y$ 时成立）<span style="background:#d3f8b6">(充要条件)</span>
 > - 对于凹函数，也可以得到类似的性质
 > - <span style="background:#d3f8b6">这个证明过程非常值得学习，首先从定义的等价性出发，转化为只需要证明标量的情况，然后就可以方便求导。</span>
-### 3.1.4 Second-order conditions
+### 1.4 Second-order conditions
 >[!note] Second-order conditions
 >Assume that $f$ is twice differentiable. Then $f$ is convex if and only if $\textbf{dom }f$ is convex and its Hessian is positive semidefinite: for all $x \in \textbf{dom }f$,
 > $$
@@ -74,7 +72,7 @@ draft: false
 > - 该性质如果不取等，可以推出严格凸，但反之不成立, e.g., $x^4$. <span style="background:#d3f8b6">(充分条件)</span>
 
 >Note: $\textbf{dom }f$ is convex cannot be dropped from the first- or second-order characterizations of convexity and concavity. (e.g. $f(x)=\frac{1}{x^2}$ is not a convex function)
-### 3.1.5 Examples
+### 1.5 Examples
 >[!example] Examples
 >- Quadratic function
 >- Least squares objective
@@ -88,7 +86,7 @@ draft: false
 > 结论 1： $A>0 \iff R^{T}AR>0$，对任意非奇异矩阵 $R$。也就是说乘以非奇异矩阵不会破坏正定性质。<font color="#ff0000">非奇异矩阵保留正定性。</font>
 > 结论 2：$PAP^{-1}$ 保留特征值（特征值不变）。<font color="#ff0000">可逆矩阵保留特征值。</font>
 > 结论 3：实对称矩阵一定可以相似对角化。
-### 3.1.6 Sublevel set
+### 1.6 Sublevel set
 
 >[!note] Sublevel set
 > The $\alpha$-**sublevel set** of $f: \mathbb{R}^{n} \to \mathbb{R}$:
@@ -100,7 +98,7 @@ draft: false
 > - If $f$ is concave, then its $\alpha$ -superlevel set, given by $\{ x \in \textbf{dom }f | f(x) \geq \alpha \}$, is a convex set.
 > - 这是证明一个集合是凸集的办法。
 
-### 3.1.7 Epigraph
+### 1.7 Epigraph
 >[!note] Epigraph
 > for  $f:\mathbb{R}^{n} \to R$
 > $$
@@ -113,7 +111,7 @@ draft: false
 > $$ 
 > is a convex set.
 > - 这条性质建立了凸集和凸函数的联系。（充要）
-### 3.1.8 Jensen's inequality and extensions
+### 1.8 Jensen's inequality and extensions
 >[!note] Jensen's inequality
 >**Extenstion:** if $f$ is convex, then
 > $$
@@ -121,14 +119,14 @@ draft: false
 > $$
 > for any random variable $z$
 > - We can interpret it as follows. Suppose $x \in \textbf{dom }f \subseteq \mathbb{R}^{n}$ and $z$ is any zero mean random vector in $\mathbb{R}^n$. Then we have $$\mathbb{E}f(x+z) \geq f(X)$$
-## 3.2 Operations that preserve convexity
+## 2 Operations that preserve convexity
 >[!note] methods for establishing convexity of a function
 > - verify definition (often simplified by restricting to aline)
 > - for twice differentiable functions, show $\nabla^{2}f(x)\geq0$
 > - show that $f$ is obtained from simple convex functions by operations that preserve convexity
-### 3.2.1 Nonnegative weighted sums
-### 3.2.2 Composition with an affine mapping
-### 3.2.3 Pointwise maximum and supremum
+### 2.1 Nonnegative weighted sums
+### 2.2 Composition with an affine mapping
+### 2.3 Pointwise maximum and supremum
 > [!tip] maximum 与 supremum 的区别
 > - 在有限点集上是一样的，在无限点集上，maximum 可能不存在，但 supremum 一定存在。因为 supremum 并不需要取到最大的那个点。
 > - supreme 用于 infinite set
@@ -158,7 +156,7 @@ draft: false
 >- Almost every convex function can be expressed as the pointwise supremum of a family of affine functions.
 >- For example, if $f:\mathbb{R}^{n}\to \mathbb{R}$ is convex, with $\textbf{dom }f=\mathbb{R}^n$, then we have $$f(x)=\sup \{ g(x)|g \text{ affine},\ g(z)\leq f(z)\text{ for all }z \}$$
 
-### 3.2.4 Composition
+### 2.4 Composition
 > We examine conditions on $h:\mathbb{R}^{k}\to \mathbb{R}$ and $g:\mathbb{R}^{h}\to \mathbb{R}^k$ that guarantee convexity or concavity of their composition $f=h\circ g:\mathbb{R}^{n}\to \mathbb{R}$, defined by
 > $$f(x)=h(g(x)), \textbf{dom }f = \{ x \in \textbf{dom }g|g(x) \in \textbf{dom }h \}$$
 
@@ -183,7 +181,7 @@ draft: false
 > - $g_{i}$ is affine.
 > - 注意是 $\tilde{h}$，<span style="background:#d3f8b6">非常重要！</span>
 
-### 3.2.5 Minimization
+### 2.5 Minimization
 >[!note] Minimization
 >If $f$ convex in $(x,y)$, and $C$ is a convex nonempty set, then the function 
 > $$
@@ -201,7 +199,7 @@ draft: false
 > $$
 > \begin{align}h(x)&=\underset{y}{\inf}\ f(x)+g(x-y)\\ &= \underset{x_{1}+x_{2}=x}{\inf}\ f(x_{1})+g(x_{2}) \end{align}
 > $$
-### 3.2.6 Perspective of a function
+### 2.6 Perspective of a function
 
 >[!note] Perspective of a function
 >If $f:\mathbb{R}^{n}\to \mathbb{R}$, then the perspective of $f$ is the function $g:\mathbb{R}^{n}\to \mathbb{R}$ defined by 
@@ -213,8 +211,8 @@ draft: false
 > \textbf{dom }g=\{ (x,t)|x/t\in \textbf{dom }f,t>0 \}
 > $$
 
-## 3.3 the conjugate function
-### 3.3.1 Definition and examples
+## 3 the conjugate function
+### 3.1 Definition and examples
 >[!note] conjugate function
 >Let $f:\mathbb{R}^{n}\to \mathbb{R}$. The function $f^*:\mathbb{R}^{n}\to \mathbb{R}$, defines as 
 > $$ 
@@ -230,10 +228,10 @@ draft: false
 >- 可以看出来，最重要的一点就是找 $y$ 的定义域了。那么就关于 $x$ **求导**，取最大即可。
 >- 关键在于找该函数取最大时，$x$ 的值。
 
-### 3.3.2 Basic properties
+### 3.2 Basic properties
 >[!note] conjugate of the conjugate
 >If $f$ is convex, and $f$ is closed (i.e., $\textbf{dom }f$ is a closed set), then $f^{**}=f$.
-## 3.4 quasiconvex functions
+## 4 quasiconvex functions
 >[!note] Quasiconvex function
 >A function $f:\mathbb{R}^n\to \mathbb{R}$ is called **quasiconvex** or **unimodal** if its domain ad all its sublevel sets 
 > $$
@@ -261,8 +259,8 @@ draft: false
 
 >[!note] Sums
 >sums of quasiconvex functions are not necessarily quasiconvex
-## 3.5 Log-concave and log-convex functions
-### 3.5.1 Definition
+## 5 Log-concave and log-convex functions
+### 5.1 Definition
 >[!note] Log-concave
 >A function $f:\mathbb{R}^{n}\to \mathbb{R}$ is **logarithmically concave** or **log-concave**: if $f(x)>0$ for all $x \in \textbf{dom }f$ and $\log f$ is concave.
 
@@ -275,7 +273,7 @@ draft: false
 > - A non-negative concave function is log-concave.
 > - many common probability densities are log-concave.
 > - cdf of a Gaussian density is log-concave.
-### 3.5.2 Properties
+### 5.2 Properties
 - Twice differentiable log-convex/concave functions
 - Multiplication, addition, and integration
   - closed for multiplication and positive scaling
