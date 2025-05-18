@@ -4,7 +4,7 @@ published: 2024-09-14
 description: Astro的项目结构
 tags:
   - DevTools
-category: 工具
+category: 开发
 draft: false
 date_created: 2024-09-14-周六
 ---
