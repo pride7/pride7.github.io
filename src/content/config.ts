@@ -21,4 +21,5 @@ const postsCollection = defineCollection({
 })
 export const collections = {
   posts: postsCollection,
+  spec: defineCollection({ type: 'content' }),
 }

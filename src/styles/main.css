@@ -1,4 +1,11 @@
+@import './markdown.css';
+@import './scrollbar.css';
+@import './transition.css';
+@import './photoswipe.css';
+
+@tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 @layer components {
     .card-base {

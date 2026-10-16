@@ -21,13 +21,14 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://fuwari.vercel.app/",
+  site: "https://pride7.github.io/",
   base: "/",
   trailingSlash: "always",
   integrations: [
     tailwind(
         {
           nesting: true,
+          applyBaseStyles: false,
         }
     ),
     swup({
@@ -56,6 +57,8 @@ export default defineConfig({
     sitemap(),
     Compress({
       CSS: false,
+      // Astro already compacts HTML; another pass removes Svelte hydration anchors.
+      HTML: false,
       Image: false,
       Action: {
         Passed: async () => true, // https://github.com/PlayForm/Compress/issues/376

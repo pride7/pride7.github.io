@@ -5,6 +5,9 @@ import Pagination from '../components/control/Pagination.astro'
 import { PAGE_SIZE } from '../constants/constants'
 import MainGridLayout from '../layouts/MainGridLayout.astro'
 import { getSortedPosts } from '../utils/content-utils'
+import { profileConfig } from '../config'
+import { url } from '../utils/url-utils'
+import ProjectShowcase from '../components/ProjectShowcase.astro'
 
 export const getStaticPaths = (async ({ paginate }) => {
   const allBlogPosts = await getSortedPosts()
@@ -15,9 +18,26 @@ export const getStaticPaths = (async ({ paginate }) => {
 const { page } = Astro.props
 
 const len = page.data.length
+const introduction = '分享有意思的软件、自己做的游戏，还有平时折腾出来的小玩意。'
 ---
 
-<MainGridLayout>
+<MainGridLayout description={introduction}>
+    {page.currentPage === 1 && (
+        <section aria-labelledby="home-intro" class="card-base px-5 md:px-6 py-4 mb-3 onload-animation">
+            <h1 id="home-intro" class="text-xl md:text-2xl font-bold text-90 mb-1">你好，我是 {profileConfig.name}</h1>
+            <p class="text-75 text-sm leading-relaxed">{introduction}</p>
+            <nav aria-label="探索博客" class="flex flex-wrap gap-2 mt-3 text-xs md:text-sm font-medium">
+                <a class="btn-regular rounded-lg px-3 py-1.5" href={url('/projects/')}>我的作品 →</a>
+                <a class="btn-regular rounded-lg px-3 py-1.5" href={url('/about/')}>关于我</a>
+            </nav>
+        </section>
+    )}
+    {page.currentPage === 1 && (
+        <>
+            <ProjectShowcase />
+            <h2 class="px-5 md:px-6 mt-5 mb-3 text-base font-bold text-90">文章与随笔</h2>
+        </>
+    )}
     <PostPage page={page}></PostPage>
     <Pagination class="mx-auto onload-animation" page={page} style=`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`></Pagination>
 </MainGridLayout>

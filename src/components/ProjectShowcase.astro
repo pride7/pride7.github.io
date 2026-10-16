@@ -1,0 +1,29 @@
+---
+import { Icon } from 'astro-icon/components'
+import { projects } from '../data/projects'
+import { url } from '../utils/url-utils'
+---
+
+<section aria-labelledby="featured-projects" class="card-base px-5 md:px-6 py-4 mb-3 onload-animation">
+    <header class="flex items-center justify-between gap-3 mb-3">
+        <h2 id="featured-projects" class="text-base font-bold text-90">我的作品</h2>
+        <a href={url('/projects/')} class="link text-xs text-[var(--btn-content)]">全部作品 →</a>
+    </header>
+    <div class="grid gap-2.5 sm:grid-cols-3">
+        {projects.map(project => (
+            <a href={url(`/projects/#${project.id}`)}
+               class="group rounded-xl p-3 bg-black/[0.025] dark:bg-white/[0.035] hover:bg-[var(--btn-regular-bg)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--primary)] transition">
+                <div class="flex items-center gap-2">
+                    <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[var(--btn-regular-bg)] text-[var(--btn-content)]">
+                        <Icon name={project.icon} class="text-sm" aria-hidden="true" />
+                    </span>
+                    <h3 class="font-bold text-sm text-90 group-hover:text-[var(--btn-content)]">{project.name}</h3>
+                </div>
+                <p class="mt-2 text-xs leading-relaxed text-75 line-clamp-3">{project.summary}</p>
+                <span class="mt-2 inline-flex items-center gap-1 text-xs text-[var(--btn-content)]">
+                    了解更多<Icon name="fa6-solid:arrow-right" class="text-[0.6rem]" aria-hidden="true" />
+                </span>
+            </a>
+        ))}
+    </div>
+</section>

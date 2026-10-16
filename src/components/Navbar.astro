@@ -62,61 +62,33 @@ let links: NavBarLink[] = navBarConfig.links.map(
 
 <script>
 
-function switchTheme() {
-    if (localStorage.theme === 'dark') {
-        document.documentElement.classList.remove('dark');
-        localStorage.theme = 'light';
-    } else {
-        document.documentElement.classList.add('dark');
-        localStorage.theme = 'dark';
-    }
-}
-
 function loadButtonScript() {
-    let switchBtn = document.getElementById("scheme-switch");
-    if (switchBtn) {
-        switchBtn.addEventListener("click", function () {
-            switchTheme()
-        });
-    }
+    const menuPanel = document.getElementById("nav-menu-panel");
+    menuPanel?.querySelectorAll('a').forEach(link => {
+        link.onclick = () => menuPanel.classList.add('float-panel-closed');
+    });
 
     let settingBtn = document.getElementById("display-settings-switch");
     if (settingBtn) {
-        settingBtn.addEventListener("click", function () {
+        settingBtn.onclick = () => {
             let settingPanel = document.getElementById("display-setting");
             if (settingPanel) {
                 settingPanel.classList.toggle("float-panel-closed");
             }
-        });
+        };
     }
 
     let menuBtn = document.getElementById("nav-menu-switch");
     if (menuBtn) {
-        menuBtn.addEventListener("click", function () {
+        menuBtn.onclick = () => {
             let menuPanel = document.getElementById("nav-menu-panel");
             if (menuPanel) {
                 menuPanel.classList.toggle("float-panel-closed");
             }
-        });
+        };
     }
 }
 
 loadButtonScript();
 
-document.addEventListener('astro:after-swap', () => {
-    loadButtonScript();
-}, { once: false });
 </script>
-
-{import.meta.env.PROD && <script is:inline define:vars={{scriptUrl: url('/pagefind/pagefind.js')}}>
-async function loadPagefind() {
-    const pagefind = await import(scriptUrl)
-    await pagefind.options({
-        'excerptLength': 20
-    })
-    pagefind.init()
-    window.pagefind = pagefind
-    pagefind.search('')     // speed up the first search
-}
-loadPagefind()
-</script>}

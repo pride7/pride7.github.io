@@ -1,0 +1,45 @@
+---
+import { Icon } from 'astro-icon/components'
+import MainGridLayout from '../layouts/MainGridLayout.astro'
+import { projects } from '../data/projects'
+---
+
+<MainGridLayout title="作品" description="我的一些软件与游戏：FrameSeq 幻灯片编辑器、Verso Markdown 笔记和风行物语。">
+    <div data-pagefind-body>
+        <header class="card-base px-5 md:px-6 py-4 md:py-5 mb-3 onload-animation">
+            <h1 class="text-xl md:text-2xl font-bold text-90 mb-1">我的作品</h1>
+            <p class="text-sm leading-relaxed text-75">一些自己做、也想分享给你的软件和游戏。</p>
+        </header>
+        <div class="flex flex-col gap-3">
+            {projects.map(project => (
+                <article id={project.id} class="card-base scroll-mt-24 px-5 md:px-6 py-4 md:py-5 onload-animation">
+                    <div class="flex items-center gap-3">
+                        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--btn-regular-bg)] text-[var(--btn-content)]">
+                            <Icon name={project.icon} class="text-xl" aria-hidden="true" />
+                        </span>
+                        <div class="min-w-0">
+                            <h2 class="text-lg md:text-xl leading-snug font-bold text-90">{project.name}</h2>
+                            <p class="text-xs text-50 mt-0.5">{project.kind}</p>
+                        </div>
+                    </div>
+                    <p class="mt-3 text-sm leading-relaxed text-75">{project.description}</p>
+                    <ul class="flex flex-wrap gap-2 mt-3">
+                        {project.features.map(feature => (
+                            <li class="rounded-md bg-[var(--btn-regular-bg)] text-[var(--btn-content)] text-xs px-2 py-1">{feature}</li>
+                        ))}
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        {project.links.map(link => (
+                            <a href={link.url} target="_blank" rel="noopener noreferrer"
+                               class="btn-regular rounded-lg px-3 py-2 gap-2 text-sm font-medium">
+                                {link.label}
+                                <Icon name="fa6-solid:arrow-up-right-from-square" class="text-[0.6rem]" aria-hidden="true" />
+                                <span class="sr-only">（新窗口打开 {project.name}）</span>
+                            </a>
+                        ))}
+                    </div>
+                </article>
+            ))}
+        </div>
+    </div>
+</MainGridLayout>

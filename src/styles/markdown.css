@@ -1,4 +1,15 @@
 .custom-md {
+    /* Keep wide formulas readable inside the article card on small screens. */
+    .katex-display {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-block: 0.25em;
+
+        > .katex {
+            min-width: max-content;
+        }
+    }
+
     h1 {
         @apply text-3xl;
     }
